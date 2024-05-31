@@ -51,18 +51,18 @@ export function AlertHelper(props) {
   )
 }
 
+export function customSuccessMSG(dispatch, successMessage) {
+  dispatch({ type: 'set', successMessage: successMessage })
+  setTimeout(() => {
+    dispatch({ type: 'set', successMessage: null })
+  }, 100)
+}
+
 export function setAlertTimeout(dispatch) {
   dispatch({ type: 'set', isSuccessful: true })
   setTimeout(() => {
     dispatch({ type: 'set', isSuccessful: false })
     dispatch({ type: 'set', validations: [] })
     dispatch({ type: 'set', catcherror: null })
-  }, 100)
-}
-
-export function customSuccessMSG(dispatch, successMessage) {
-  dispatch({ type: 'set', successMessage: successMessage })
-  setTimeout(() => {
-    dispatch({ type: 'set', successMessage: null })
   }, 100)
 }

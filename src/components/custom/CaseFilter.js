@@ -103,25 +103,16 @@ const CaseFilter = ({ rowPerPage, filterData, setFilterData, onFilter, onReset }
             <CCol xs={12} lg={4} className="align-items-center">
               <CFormLabel>Applicant Name</CFormLabel>
               <CFormInput
+              
                 name="applicant_name"
                 placeholder="Enter Applicant Name..."
                 value={initialvalue.applicant_name}
                 onChange={(e) => handleChange(e.target.name, e.target.value)}
+
               />
             </CCol>
 
-            {/* Case of branch */}
-            {/* <CCol xs="4" className="align-items-center">
-                            <CFormLabel>Case of Branch</CFormLabel>
-                            <CFormInput
-                                name="case_of_branch"
-                                placeholder="Enter Case of Branch..."
-                                value={initialvalue.case_of_branch}
-                                onChange={(e) => handleChange(e.target.name, e.target.value)}
-                            />
-                        </CCol> */}
 
-            {/* RA Branch */}
             <CCol xs={12} lg={4} className="align-items-center">
               <CFormLabel>RA Branch</CFormLabel>
               <Select
